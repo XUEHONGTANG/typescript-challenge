@@ -10,10 +10,16 @@ export function asyncSum(numbers: number[]): Promise<number> {
     return new Promise((resolve, reject) => {
         try {
             // 請在此處寫下你的程式碼
+            resolve(arraySum(numbers));
         } catch (error) {
             reject(error);
         }
     });
+}
+
+function arraySum(numbers: number[]): number {
+    // 使用 reduce 函式計算總和
+    return numbers.reduce((sum, current) => sum + current, 0);
 }
 
 

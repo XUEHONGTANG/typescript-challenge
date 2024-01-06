@@ -13,5 +13,6 @@
  * 輸出: 0
  */
 export function arraySum(numbers: number[]): number {
-    // 在此實現函式
+    // 使用 reduce 函式計算總和
+    return numbers.reduce((sum, current) => sum + current, 0);
 }

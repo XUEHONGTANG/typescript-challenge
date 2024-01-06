@@ -19,5 +19,13 @@ interface UrlParts {
 }
 
 export function parseUrl(url: string): UrlParts {
-   // 請在此處寫下你的程式碼
+  // 使用 URL 類別解析網址
+  const parsedUrl = new URL(url);
+
+  // 回傳包含解析結果的物件
+  return {
+    protocol: parsedUrl.protocol,
+    hostname: parsedUrl.hostname,
+    path: parsedUrl.pathname,
+  };
 }
